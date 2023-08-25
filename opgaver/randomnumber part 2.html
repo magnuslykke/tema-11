@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>random number</h1>
+    <button id="generateButton">Generer Tilfældigt Tal</button>
+    <p id="randomNumber"></p>
+  </body>
+</html>
+
+<script>
+  function generateRandomNumber() {
+    let randomNum = Math.floor(Math.random() * 101);
+    let randomNumberElement = document.getElementById("randomNumber");
+    randomNumberElement.textContent = "Det tilfældige tal er: " + randomNum;
+    console.log(randomNum);
+  }
+
+  // Kald funktionen for at generere og udskrive et tilfældigt tal
+  generateRandomNumber();
+
+  // Lyt efter klik på knappen og kald funktionen
+  let generateButton = document.getElementById("generateButton");
+  generateButton.addEventListener("click", generateRandomNumber);
+</script>

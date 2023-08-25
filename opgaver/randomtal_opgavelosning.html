@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="the_name">gæt et tal fra 0 til 100</label>
+    <input type="number" id="guess" name="name" />
+    <button>Gæt</button>
+    <h2 id="result">-</h2>
+  </body>
+</html>
+
+<script>
+  "use strict";
+
+  const comGuess = Math.floor(Math.random() * 100);
+  console.log("comGuess");
+
+  document.querySelector("button").addEventListener("click", klik);
+
+  function klik() {
+    const userGuess = document.querySelector("#guess").value;
+    console.log("userGuess", userGuess);
+    console.log("userGuess", typeof userGuess);
+    const resultText = document.querySelector("#result");
+    if (userGuess == comGuess) {
+      resultText.textContent = "Tillykke du har gættet rigtigt";
+    } else if (userGuess < comGuess) {
+      resultText.textContent = "det er for lavt";
+    } else {
+      resultText.textContent = "Det er for højt";
+    }
+  }
+</script>

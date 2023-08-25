@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading"></h1>
+    <h2></h2>
+    <script>
+      "use strict";
+
+      //Return value excersise 1
+
+      function greetings(firstName) {
+        return `Hello ${firstName}`;
+      }
+
+      const result = greetings("any name");
+      console.log(greetings("any name"));
+
+      document.querySelector("#heading").textContent = result;
+
+      const txt = `Greeting is ${greetings("Magnus")}`;
+
+      console.log(txt);
+
+      document.querySelector("h2").textContent = txt;
+
+      //---------------------------
+      //Return Value excersise 2:
+
+      //   function greetings ("any name"){
+      //     console.log (greeting ("any name"));
+      //   }
+    </script>
+  </body>
+</html>
